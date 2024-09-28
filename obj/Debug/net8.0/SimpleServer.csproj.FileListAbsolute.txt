@@ -1,0 +1,15 @@
+C:\Users\Admin\source\repos\SimpleServer\bin\Debug\net8.0\SimpleServer.exe
+C:\Users\Admin\source\repos\SimpleServer\bin\Debug\net8.0\SimpleServer.deps.json
+C:\Users\Admin\source\repos\SimpleServer\bin\Debug\net8.0\SimpleServer.runtimeconfig.json
+C:\Users\Admin\source\repos\SimpleServer\bin\Debug\net8.0\SimpleServer.dll
+C:\Users\Admin\source\repos\SimpleServer\bin\Debug\net8.0\SimpleServer.pdb
+C:\Users\Admin\source\repos\SimpleServer\obj\Debug\net8.0\SimpleServer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\source\repos\SimpleServer\obj\Debug\net8.0\SimpleServer.AssemblyInfoInputs.cache
+C:\Users\Admin\source\repos\SimpleServer\obj\Debug\net8.0\SimpleServer.AssemblyInfo.cs
+C:\Users\Admin\source\repos\SimpleServer\obj\Debug\net8.0\SimpleServer.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\SimpleServer\obj\Debug\net8.0\SimpleServer.sourcelink.json
+C:\Users\Admin\source\repos\SimpleServer\obj\Debug\net8.0\SimpleServer.dll
+C:\Users\Admin\source\repos\SimpleServer\obj\Debug\net8.0\refint\SimpleServer.dll
+C:\Users\Admin\source\repos\SimpleServer\obj\Debug\net8.0\SimpleServer.pdb
+C:\Users\Admin\source\repos\SimpleServer\obj\Debug\net8.0\SimpleServer.genruntimeconfig.cache
+C:\Users\Admin\source\repos\SimpleServer\obj\Debug\net8.0\ref\SimpleServer.dll
