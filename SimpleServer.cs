@@ -7,10 +7,14 @@ namespace SimpleServer
     {
         public static void Main()
         {
-            ushort port = 2003;
+            
+            //ushort port = 2003;
+            Console.Write("Enter port number: ");
+            ushort port = Convert.ToUInt16(Console.ReadLine());
+            //int.Parse(port);
             IPAddress address = IPAddress.Parse("127.0.0.1");
             byte[] messageBytes = new byte[1000];
-            string messageText;
+            string recievedText;
             string answerText;
             TcpListener server = new(address, port);
             try
@@ -24,15 +28,18 @@ namespace SimpleServer
 
                     NetworkStream clientStream = client.GetStream();
                     int n = clientStream.Read(messageBytes, 0, messageBytes.Length);
-                    messageText = System.Text.Encoding.ASCII.GetString(messageBytes, 0, n);
-                    Console.WriteLine($"Recieved message: {messageText}");
+                    recievedText = System.Text.Encoding.ASCII.GetString(messageBytes, 0, n);
+                    Console.WriteLine($"Recieved message: {recievedText}");
 
                     byte[] answerBytes = new byte[n];
-                    for (int i = 0; i < n; i++)
+                    /*for (int i = 0; i < n; i++)
                     {
                         answerBytes[i] = messageBytes[n - i - 1];
-                    }
-                    answerText = System.Text.Encoding.ASCII.GetString(answerBytes, 0, n);
+                    }*/
+
+                    //answerText = System.Text.Encoding.ASCII.GetString(answerBytes, 0, n);
+                    answerText = ReverseMessage(recievedText);
+                    answerBytes = System.Text.Encoding.ASCII.GetBytes(answerText);
                     clientStream.Write(answerBytes, 0, n);
                     Console.WriteLine($"Sent message: {answerText}");
 
@@ -48,5 +55,16 @@ namespace SimpleServer
                 server.Stop();
             }
         }
+        
+        public static string ReverseMessage(string message)
+        {
+            //string  = "woman loving woman wlw";
+            char[] charArray = message.ToCharArray();
+            Array.Reverse(charArray);
+            //string sentMessage = (char)charArray;
+            return new(charArray);
+            //Console.WriteLine(charArray);
+        }
     }
 }
+
