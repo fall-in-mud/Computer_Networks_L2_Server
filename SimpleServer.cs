@@ -34,11 +34,11 @@ namespace Server
             byte[] recievedBytes = new byte[1024];
             string recievedText;
             string answerText;
+            Console.WriteLine($"Server IP address: {Dns.GetHostEntry(Dns.GetHostName()).AddressList[0]}");
             TcpListener listener = new(IPAddress.Any, port);
             try
             {
                 listener.Start();
-                Console.WriteLine($"Broadcast IP address of the server: {}");
                 while (true)
                 {
                     Console.WriteLine("Waiting for client...");
@@ -83,11 +83,11 @@ namespace Server
         {
             try
             {
-                TcpClient server = new(ip, port);
+                TcpClient client = new(ip, port);
                 Console.WriteLine("Connection established");
 
                 byte[] messageBytes = System.Text.Encoding.ASCII.GetBytes(messageText);
-                NetworkStream clientStream = server.GetStream();
+                NetworkStream clientStream = client.GetStream();
                 clientStream.Write(messageBytes, 0, messageBytes.Length);
                 Console.WriteLine($"Sent message: {messageText}");
 
@@ -97,7 +97,7 @@ namespace Server
                 Console.WriteLine($"Recieved message: {recievedText}");
 
                 clientStream.Close();
-                server.Close();
+                client.Close();
             }
             catch
             {

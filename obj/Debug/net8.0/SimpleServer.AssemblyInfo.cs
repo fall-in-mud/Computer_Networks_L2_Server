@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SimpleServer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ff74502cc130943492a7bf994001fc8be2fabbca")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0abdc5c1ee54b0c9e0e3480d9e6e0bfd61011e21")]
 [assembly: System.Reflection.AssemblyProductAttribute("SimpleServer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SimpleServer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
