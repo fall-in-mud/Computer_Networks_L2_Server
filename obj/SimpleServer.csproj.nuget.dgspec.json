@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lvlvv\\source\\repos\\git_clone_repos\\Computer_Networks_L2_Server\\SimpleServer.csproj": {}
+    "C:\\Users\\Admin\\source\\repos\\Computer_Networks_L2_Server\\SimpleServer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lvlvv\\source\\repos\\git_clone_repos\\Computer_Networks_L2_Server\\SimpleServer.csproj": {
+    "C:\\Users\\Admin\\source\\repos\\Computer_Networks_L2_Server\\SimpleServer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lvlvv\\source\\repos\\git_clone_repos\\Computer_Networks_L2_Server\\SimpleServer.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\Computer_Networks_L2_Server\\SimpleServer.csproj",
         "projectName": "SimpleServer",
-        "projectPath": "C:\\Users\\lvlvv\\source\\repos\\git_clone_repos\\Computer_Networks_L2_Server\\SimpleServer.csproj",
-        "packagesPath": "C:\\Users\\lvlvv\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lvlvv\\source\\repos\\git_clone_repos\\Computer_Networks_L2_Server\\obj\\",
+        "projectPath": "C:\\Users\\Admin\\source\\repos\\Computer_Networks_L2_Server\\SimpleServer.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\source\\repos\\Computer_Networks_L2_Server\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\lvlvv\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

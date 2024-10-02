@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\lvlvv\\source\\repos\\git_clone_repos\\Computer_Networks_L2_Server\\",
+  "WorkspaceRootPath": "C:\\Users\\Admin\\source\\repos\\Computer_Networks_L2_Server\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{542EFFF1-B2CA-429D-B1DF-E12403828F1C}|SimpleServer.csproj|c:\\users\\lvlvv\\source\\repos\\git_clone_repos\\computer_networks_l2_server\\simpleserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{542EFFF1-B2CA-429D-B1DF-E12403828F1C}|SimpleServer.csproj|c:\\users\\admin\\source\\repos\\computer_networks_l2_server\\simpleserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{542EFFF1-B2CA-429D-B1DF-E12403828F1C}|SimpleServer.csproj|solutionrelative:simpleserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -20,11 +20,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "SimpleServer.cs",
-              "DocumentMoniker": "C:\\Users\\lvlvv\\source\\repos\\git_clone_repos\\Computer_Networks_L2_Server\\SimpleServer.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\Computer_Networks_L2_Server\\SimpleServer.cs",
               "RelativeDocumentMoniker": "SimpleServer.cs",
-              "ToolTip": "C:\\Users\\lvlvv\\source\\repos\\git_clone_repos\\Computer_Networks_L2_Server\\SimpleServer.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\Computer_Networks_L2_Server\\SimpleServer.cs",
               "RelativeToolTip": "SimpleServer.cs",
-              "ViewState": "AQIAAD0AAAAAAAAAAAAkwEYAAAAxAAAA",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAgwFsAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-28T04:04:42.06Z",
               "EditorCaption": ""

@@ -1,11 +1,27 @@
-﻿using System.Net;
+﻿using Server;
+using System.Net;
 using System.Net.Sockets;
-using Server;
 class Program
 {
-    public static void Main()
+    public static void Main(string[] args)
     {
-        Console.WriteLine();
+        if (args.Length > 0)
+        {
+            if (args[0] == "server" && args.Length == 2)
+            {
+                SimpleServer server = new();
+                server.Launch(Convert.ToUInt16(args[1]));
+            }
+            else if (args[0] == "client" && args.Length == 4)
+            {
+                SimpleClient client = new();
+                client.SendMessage(args[1], args[2], Convert.ToUInt16(args[3]));
+            }
+            else
+            {
+                Console.WriteLine("Wrong arguments");
+            }
+        }
     }
 }
 
@@ -18,15 +34,15 @@ namespace Server
             byte[] recievedBytes = new byte[1024];
             string recievedText;
             string answerText;
-            TcpListener server = new(IPAddress.Any, port);
+            TcpListener listener = new(IPAddress.Any, port);
             try
             {
-                server.Start();
-                Console.WriteLine($"Broadcast IP address of the server: {IPAddress.Broadcast}");
+                listener.Start();
+                Console.WriteLine($"Broadcast IP address of the server: {}");
                 while (true)
                 {
                     Console.WriteLine("Waiting for client...");
-                    TcpClient client = server.AcceptTcpClient();
+                    TcpClient client = listener.AcceptTcpClient();
                     Console.WriteLine("Connection establshed");
 
                     NetworkStream clientStream = client.GetStream();
@@ -49,7 +65,7 @@ namespace Server
             }
             finally
             {
-                server.Stop();
+                listener.Stop();
             }
         }
 
@@ -63,7 +79,6 @@ namespace Server
 
     class SimpleClient
     {
-        readonly ushort port = 2003;
         public void SendMessage(string messageText, string ip, ushort port)
         {
             try
@@ -74,7 +89,7 @@ namespace Server
                 byte[] messageBytes = System.Text.Encoding.ASCII.GetBytes(messageText);
                 NetworkStream clientStream = server.GetStream();
                 clientStream.Write(messageBytes, 0, messageBytes.Length);
-                Console.WriteLine($"Message sent: {messageText}");
+                Console.WriteLine($"Sent message: {messageText}");
 
                 byte[] buff = new byte[1024];
                 int n = clientStream.Read(buff, 0, buff.Length);
