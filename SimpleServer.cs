@@ -34,7 +34,6 @@ namespace Server
             byte[] recievedBytes = new byte[1024];
             string recievedText;
             string answerText;
-            Console.WriteLine($"Server IP address: {GetLocalIPAddress()}");
             TcpListener listener = new(IPAddress.Any, port);
             try
             {
@@ -59,9 +58,9 @@ namespace Server
                     client.Close();
                 }
             }
-            catch
+            catch( Exception e )
             {
-                Console.WriteLine("Something went wrong...");
+                Console.WriteLine($"Something went wrong:\n{e}");
             }
             finally
             {
@@ -74,19 +73,6 @@ namespace Server
             char[] charArray = message.ToCharArray();
             Array.Reverse(charArray);
             return new(charArray);
-        }
-
-        public static string GetLocalIPAddress()
-        {
-            var host = Dns.GetHostEntry(Dns.GetHostName());
-            foreach (var ip in host.AddressList)
-            {
-                if (ip.AddressFamily == AddressFamily.InterNetwork)
-                {
-                    return ip.ToString();
-                }
-            }
-            throw new Exception("No network adapters with an IPv4 address in the system!");
         }
     }
 
@@ -112,9 +98,9 @@ namespace Server
                 clientStream.Close();
                 client.Close();
             }
-            catch
+            catch (Exception ex)
             {
-                Console.WriteLine("Something went wrong...");
+                Console.WriteLine($"Something went wrong:\n{ex}");
             }
 
         }
