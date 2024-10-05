@@ -12,10 +12,17 @@ class Program
                 SimpleServer server = new();
                 server.Launch(Convert.ToUInt16(args[1]));
             }
-            else if (args[0] == "client" && args.Length == 4)
+            else if (args[0] == "client" && args.Length == 3)
             {
                 SimpleClient client = new();
-                client.SendMessage(args[1], args[2], Convert.ToUInt16(args[3]));
+                string? messageText = null;
+                while(messageText == null)
+                {
+                    Console.Write("Please enter message: ");
+                    messageText = Console.ReadLine();
+                }
+
+                client.SendMessage(messageText, args[1], Convert.ToUInt16(args[2]));
             }
             else
             {
@@ -38,11 +45,11 @@ namespace Server
             try
             {
                 listener.Start();
-                while (true)
+                while (Console.KeyAvailable == false)
                 {
                     Console.WriteLine("Waiting for client...");
                     TcpClient client = listener.AcceptTcpClient();
-                    Console.WriteLine("Connection establshed");
+                    Console.WriteLine("Connection established");
 
                     NetworkStream clientStream = client.GetStream();
                     int n = clientStream.Read(recievedBytes, 0, recievedBytes.Length);
@@ -58,7 +65,7 @@ namespace Server
                     client.Close();
                 }
             }
-            catch( Exception e )
+            catch (Exception e)
             {
                 Console.WriteLine($"Something went wrong:\n{e}");
             }
